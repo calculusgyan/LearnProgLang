@@ -1,0 +1,86 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+using namespace std;
+
+int num, num1, iResponse = 0;
+float inum, inum1;
+
+class iAssign{
+public:
+   int iSum(int, int){
+      int iAns;
+      system("cls");
+      cout << endl << "\t\t ADDITION COLUMN" << endl << "\t\t ------------------" << endl;
+      cout << "\t\n Enter a number : ";
+      cin >> num;
+      cout << "\t\n Enter another number : ";
+      cin >> num1;
+      iAns = num + num1;
+      return iAns;
+   }
+   int iSubtract(int, int){
+      int iTotal;
+      system("cls");
+      cout << endl << "\t\t SUBTRACTION COLUMN" << endl << "\t\t ------------------" << endl;
+      cout << "\t\n Enter a number : ";
+      cin >> num;
+      cout << "\t\n Enter another number : ";
+      cin >> num1;
+      iTotal = num - num1;
+      return iTotal;
+      }
+   float iDivide(float, float)
+   {
+      float iValue;
+      system("cls");
+      cout << endl << "\t\t DIVISION COLUMN" << endl << "\t\t ------------------" << endl;
+      cout << "\t\n Enter a number : ";
+      cin >> inum;
+      cout << "\t\n Enter another number : ";
+      cin >> inum1;
+      iValue = inum / inum1;
+      return iValue;
+   }
+   };
+
+int main()
+{
+   //A class containing three functions
+   iAssign Arthmetic;
+
+   do{
+         system("cls");
+      cout << endl << "\t\t\ A PROGRAM TO CALCULATE FOR (+, -, /) " << endl << "\t\t\ ------------------------------------" << endl;
+      cout << "\t\n 1. For Addition" << endl;
+      cout << "\t\n 2. Subtraction" << endl;
+      cout << "\t\n 3. Division" << endl;
+      cout << "\t\n 4. Exit\n\n" << endl;
+      cout << "\t Select your option : ";
+      cin >> iResponse;
+
+   switch(iResponse){
+
+   case 1 :
+      cout << "\n Addition for the numbers entered is : " << Arthmetic.iSum(num, num1) << endl;
+      Sleep(4000);
+      break;
+
+   case 2 :
+      cout << "\n Subtraction for the numbers entered is : " << Arthmetic.iSubtract(num, num1) << endl;
+      Sleep(4000);
+      break;
+
+   case 3 :
+      cout << "\n Division for the numbers entered is : " << Arthmetic.iDivide(inum, inum1) << endl;
+      Sleep(4000);
+      break;
+      }
+   }
+   while (iResponse != 4);
+         system("cls");
+         cout << "\n Thanks for trying this program, hope you enjoyed it.\n";
+
+
+    return 0;
+}
